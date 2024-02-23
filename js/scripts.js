@@ -1,8 +1,20 @@
 const reset = document.querySelector('.reset');
-
-
-
-
-;
-
-console.log( reset.dataset.reset )
+const plusMinus = document.querySelector('.plus-minus');
+const percentage = document.querySelector('.percentage');
+const divide = document.querySelector('.divide');
+const seven = document.querySelector('.seven');
+const eight = document.querySelector('.eight');
+const nine = document.querySelector('.nine');
+const multiply = document.querySelector('.multiply');
+const four = document.querySelector('.four');
+const five = document.querySelector('.five');
+const six = document.querySelector('.six');
+const minus = document.querySelector('.minus');
+const one = document.querySelector('.one');
+const two = document.querySelector('.two');
+const three = document.querySelector('.three');
+const plus = document.querySelector('.plus');
+const dot = document.querySelector('.dot');
+const zero = document.querySelector('.zero');
+const del = document.querySelector('.del');
+const equal = document.querySelector('.equal');
