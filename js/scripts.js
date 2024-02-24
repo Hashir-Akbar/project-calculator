@@ -18,3 +18,23 @@ const dot = document.querySelector('.dot');
 const zero = document.querySelector('.zero');
 const del = document.querySelector('.del');
 const equal = document.querySelector('.equal');
+
+
+
+
+
+class Calculator {
+    constructor(firstInput, sign, secondInput) {
+        this.firstInput = firstInput;
+        this.sign = sign;
+        this.secondInput = secondInput;
+    }
+
+    log(){
+        console.log(this.firstInput, this.sign, this.secondInput);
+    }
+
+}
+
+let s = new Calculator(5, '+', 5);
+s.log();
