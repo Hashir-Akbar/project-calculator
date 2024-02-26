@@ -43,6 +43,11 @@ class Calculator {
          return this.firstInput - this.secondInput;
         }
     }
+    multiply(){
+        if(this.sign === '*'){
+         return this.firstInput * this.secondInput;
+        }
+    }
 
 }
 
