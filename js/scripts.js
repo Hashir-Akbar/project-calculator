@@ -38,6 +38,11 @@ class Calculator {
          return this.firstInput + this.secondInput;
         }
     }
+    minus(){
+        if(this.sign === '-'){
+         return this.firstInput - this.secondInput;
+        }
+    }
 
 }
 
