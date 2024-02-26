@@ -48,6 +48,11 @@ class Calculator {
          return this.firstInput * this.secondInput;
         }
     }
+    divide(){
+        if(this.sign === '/'){
+         return this.firstInput / this.secondInput;
+        }
+    }
 
 }
 
