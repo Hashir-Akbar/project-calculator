@@ -33,8 +33,13 @@ class Calculator {
     log(){
         console.log(this.firstInput, this.sign, this.secondInput);
     }
+    add(){
+        if(this.sign === '+'){
+         return this.firstInput + this.secondInput;
+        }
+    }
 
 }
 
 let s = new Calculator(5, '+', 5);
-s.log();
+console.log(s.add())
