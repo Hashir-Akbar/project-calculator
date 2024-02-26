@@ -58,6 +58,7 @@ class Calculator {
          return this.firstInput % this.secondInput;
         }
     }
+  
 
 }
 
