@@ -53,6 +53,11 @@ class Calculator {
          return this.firstInput / this.secondInput;
         }
     }
+    percentage(){
+        if(this.sign === '%'){
+         return this.firstInput % this.secondInput;
+        }
+    }
 
 }
 
