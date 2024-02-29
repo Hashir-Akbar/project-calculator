@@ -19,6 +19,44 @@ const zero = document.querySelector('.zero');
 const del = document.querySelector('.del');
 const equal = document.querySelector('.equal');
 
+const input = document.querySelector('.input')
+
+
+
+seven.addEventListener('click', () => {
+    input.value += 7;
+})
+eight.addEventListener('click', () => { 
+    input.value += 8;   
+})
+nine.addEventListener('click', () => {
+    input.value += 9;
+})
+
+del.addEventListener('click', () => {   
+    input.value = input.value.slice(0, -1);
+})
+six.addEventListener('click' , () => {
+       input.value += 6;
+})
+five.addEventListener('click', ()=>{
+    input.value += 5
+})
+four.addEventListener('click', () => {
+    input.value += 4
+})
+three.addEventListener('click' , () =>{
+    input.value += 3
+})
+two.addEventListener('click', () =>{
+    input.value += 2
+})
+one.addEventListener('click', () => {
+    input.value += 1
+})
+zero.addEventListener('click', ()=>{
+    input.value += 0
+})
 
 
 
