@@ -58,7 +58,27 @@ zero.addEventListener('click', ()=>{
     input.value += 0
 })
 
-
+dot.addEventListener('click', () => {
+    input.value += '.'
+})
+reset.addEventListener('click', () => { 
+    input.value = '';
+})
+divide.addEventListener('click', () => {
+    input.value += '/';
+})
+percentage.addEventListener('click', () => {
+    input.value += '%';
+})
+multiply.addEventListener('click', () => {
+    input.value += '*';
+})
+minus.addEventListener('click', () => { 
+    input.value += '-';
+})
+plus.addEventListener('click', () => {  
+    input.value += '+';
+})
 
 
 class Calculator {
@@ -100,5 +120,29 @@ class Calculator {
 
 }
 
-let s = new Calculator(5, '+', 5);
-console.log(s.add())
+
+equal.addEventListener('click', () => {
+    let result;
+    let firstInput = input.value.split(/[-+*/%]/)[0];
+    let sign = input.value.split(/[-+*/%]/)[1];
+    let secondInput = input.value.split(/[-+*/%]/)[2];
+    let s = new Calculator(Number(firstInput), sign, Number(secondInput));
+    if(sign === '+'){
+        result = s.add();
+    }
+    if(sign === '-'){
+        result = s.minus();
+    }
+    if(sign === '*'){
+        result = s.multiply();
+    }
+    if(sign === '/'){
+        result = s.divide();
+    }
+    if(sign === '%'){
+        result = s.percentage();
+    }
+    input.value = result;
+});
+
+console.log(s.add());
