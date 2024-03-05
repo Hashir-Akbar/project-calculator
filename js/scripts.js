@@ -119,30 +119,39 @@ class Calculator {
   
 
 }
-
-
 equal.addEventListener('click', () => {
     let result;
-    let firstInput = input.value.split(/[-+*/%]/)[0];
-    let sign = input.value.split(/[-+*/%]/)[1];
-    let secondInput = input.value.split(/[-+*/%]/)[2];
-    let s = new Calculator(Number(firstInput), sign, Number(secondInput));
-    if(sign === '+'){
-        result = s.add();
-    }
-    if(sign === '-'){
-        result = s.minus();
-    }
-    if(sign === '*'){
-        result = s.multiply();
-    }
-    if(sign === '/'){
-        result = s.divide();
-    }
-    if(sign === '%'){
-        result = s.percentage();
+    const values = input.value.split(/([-+*/%])/); // Split input value by operators
+    if (values.length === 3) {
+        const firstInput = Number(values[0]);
+        const sign = values[1];
+        const secondInput = Number(values[2]);
+        const s = new Calculator(firstInput, sign, secondInput);
+        
+        switch (sign) {
+            case '+':
+                result = s.add();
+                break;
+            case '-':
+                result = s.minus();
+                break;
+            case '*':
+                result = s.multiply();
+                break;
+            case '/':
+                result = s.divide();
+                break;
+            case '%':
+                result = s.percentage();
+                break;
+            default:
+                result = "Invalid operation";
+        }
+    } else {
+        result = "Invalid input";
     }
     input.value = result;
 });
+
 
 console.log(s.add());
